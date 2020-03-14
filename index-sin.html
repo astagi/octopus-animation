@@ -21,14 +21,27 @@
         canvas.width = window.innerWidth;
         var ctx = canvas.getContext("2d");
 
+
         var x = 0, y = 0;
 
         for ( x = 0; x <= 360; x += 1 ) {
           ctx.moveTo(x, y * 180 + 180);
-          y = Math.sin(degreeToRad(x * 10));
+          y = Math.sin(degreeToRad(x));
           ctx.lineTo(x, y * 180  + 180);
           ctx.stroke();
         }
+
+        ctx.moveTo(0, 180);
+
+        ctx.lineTo(window.innerWidth, 180);
+        ctx.stroke();
+
+        ctx.font = "15px Arial";
+        ctx.strokeStyle = "red";
+
+        ctx.strokeText("-1", 0, 360);
+        ctx.strokeText("1", 0, 15);
+        ctx.strokeText("0", 0, 180);
 
 
       </script>
