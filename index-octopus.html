@@ -1,36 +1,36 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="./css/reset.css">
     </head>
     <body>
-        <img id="myOctopus" src="./assets/octopus_01.png">
-        <script>
+      <img id="myOctopus" src="./assets/octopus_01.png">
+      <script>
 
-          function degreeToRad(angle) {
+        function degreeToRad(angle) {
           return angle * (Math.PI / 180);
-          }
+        }
 
-          var animationCycle = 0;
-          var marginTopBase = -350
-          var frequency = 10;
-          var pixelOffset = 10;
+        var animationCycle = 0;
+        var marginTopBase = -350
+        var frequency = 10;
+        var pixelOffset = 10;
 
-          // Setup Octopus 🐙
-          var octopus = document.getElementById("myOctopus");
-          octopus.style.position = 'relative';
-          octopus.style.marginTop = marginTopBase;
-          octopus.style.marginLeft = -40;
+        // Setup Octopus 🐙
+        var octopus = document.getElementById("myOctopus");
+        octopus.style.position = 'relative';
+        octopus.style.marginTop = marginTopBase;
+        octopus.style.marginLeft = -40;
 
-          window.setInterval( function() {
+        window.setInterval( function() {
           octopus.style.marginTop = marginTopBase - Math.sin(degreeToRad(animationCycle * frequency)) * pixelOffset + 'px';
           animationCycle += 1;
-          }, 100 );
+        }, 100 );
 
-        </script>
+      </script>
     </body>
 </html>

@@ -1,36 +1,36 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="./css/reset.css">
     </head>
     <body>
-        <canvas id="sinCanvas" height="360" style="border: 1px solid black;"></canvas>
-        <p>X Axis: degrees</p>
-        <p>Y Axis: sin(X)</p>
-        <script>
+      <canvas id="sinCanvas" height="360" style="border: 1px solid black;"></canvas>
+      <p>X Axis: degrees</p>
+      <p>Y Axis: sin(X)</p>
+      <script>
 
-          function degreeToRad(angle) {
-            return angle * (Math.PI / 180);
-          }
+        function degreeToRad(angle) {
+          return angle * (Math.PI / 180);
+        }
 
-          var canvas = document.getElementById("sinCanvas");
-          canvas.width = window.innerWidth;
-          var ctx = canvas.getContext("2d");
+        var canvas = document.getElementById("sinCanvas");
+        canvas.width = window.innerWidth;
+        var ctx = canvas.getContext("2d");
 
-          var x = 0, y = 0;
+        var x = 0, y = 0;
 
-          for ( x = 0; x <= 360; x += 1 ) {
-            ctx.moveTo(x, y * 180 + 180);
-            y = Math.sin(degreeToRad(x * 10));
-            ctx.lineTo(x, y * 180  + 180);
-            ctx.stroke();
-          }
+        for ( x = 0; x <= 360; x += 1 ) {
+          ctx.moveTo(x, y * 180 + 180);
+          y = Math.sin(degreeToRad(x * 10));
+          ctx.lineTo(x, y * 180  + 180);
+          ctx.stroke();
+        }
 
 
-        </script>
+      </script>
     </body>
 </html>
